@@ -1,0 +1,581 @@
+/*--------------------------*/
+/*----- Estilos de Menu-----*/
+/*--------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+nav{
+    background: #3679ad;
+    height: 80px;
+    width: 100%;
+}
+
+.enlace{
+    position: absolute;
+    padding: 29px 50px;
+    font-size: 25px;
+    color: #fff;
+}
+.enlace:hover{
+    color: #0e0a4d;
+    transition: .7s;
+}
+
+
+.logo{
+    height: 40px;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 6px;
+}
+
+nav ul li a{
+    color: #fff;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+li a:hover{
+    color: black;
+    transition: .7s;
+}
+
+
+.checkbtn{
+    font-size: 25px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+.banner{
+    background: url(../img/venta-de-computadoras.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: calc(100vh - 80px);
+}
+
+.contenido{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    color: black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.contenido h1{
+    margin: 20px;
+    font-size: 3.7rem;
+    font-weight: 700;
+}
+
+.contenido p{
+    font-size: 1.7rem;
+    font-weight: 550;
+}
+
+
+/*--------------------------*/
+/*----Estilos del scroll----*/
+/*--------------------------*/
+
+body::-webkit-scrollbar{
+    width: 15px;
+}
+
+body::-webkit-scrollbar-thumb{
+    background: #032336;
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover{
+    background: #064d75;
+}
+
+/*--------------------------*/
+/*----- Nosotros-----*/
+/*--------------------------*/
+
+.about{
+    min-height: 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: -40px;
+    justify-content: center;
+    align-items: center;
+}
+
+/*posicion de la imagen superior*/
+.about_img{
+    text-align: center;
+}
+
+/*posicion de la imagen inferior*/
+.about_img-left{
+    text-align: left;
+}
+
+/*estilos de la imagen*/
+.about_picture{
+    max-width: 60%;
+}
+
+.about_paragraph{
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+/*--------------------------*/
+/*---Preguntas Frecuentes---*/
+/*--------------------------*/
+.questions{
+    text-align: center;
+}
+
+.questions__container{
+    display: grid;
+    gap: 2em;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+.questions__padding{
+    padding: 0;
+    transition: padding .3s;
+    border: 1px solid #5454D4;
+    border-radius: 6px;
+}
+
+.questions__padding--add{
+    padding-bottom: 30px;
+}
+
+.questions__answer{
+    padding: 0 30px 0;
+    overflow: hidden;
+}
+
+.questions__title{
+    text-align: left;
+    display: flex;
+    font-size: 20px;
+    padding: 30px 0 30px;
+    cursor: pointer;
+    color: var(--color-title);
+    justify-content: space-between;
+}
+
+.questions__arrow{
+    border-radius: 50%;
+    background-color: var(--color-title);
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    margin-left: 10px;
+    transition:  transform .3s;
+}
+
+.questions__arrow--rotate{
+    transform: rotate(180deg);
+}
+
+.questions__show{
+    text-align: left;
+    height: 0;
+    transition: height .3s;
+}
+
+.questions__img{
+    display: block;
+}
+
+.questions__copy{
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+/*--------------------------*/
+/*-----Galeria-----*/
+/*--------------------------*/
+
+
+.image-wrapper{
+    position: relative;
+    left: 280px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 60%;
+    grid-gap: 0.5rem;
+    margin: 50px 0;
+}
+
+h2{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+    margin: 30px 0;
+    color: #3679ad;
+}
+
+.image{
+    position: relative;
+    padding-bottom: 100%;
+}
+
+.image img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image1{
+    --clip-start: inset(100% 100% 100% 100%);
+    --clip-end: inset(0 0 0 0);
+}
+
+.image2{
+    --clip-start: ellipse(0 0 at 100% 0);
+    --clip-end: ellipse(150% 150% at 100% 0);
+}
+
+.image3{
+    --clip-start: ellipse(0 0 at 0 0);
+    --clip-end: ellipse(150% 150% at 0 0);
+}
+
+.image4{
+    --clip-start: inset(100% 0 0 0);
+    --clip-end: inset(0 0 0 0);
+}
+
+.image5{
+    --clip-start: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+    --clip-end: polygon(-50% 50%, 50% -50%, 150% 50%, 50% 150%);
+}
+
+.image6{
+    --clip-start: inset(0 0 0 100%);
+    --clip-end: inset(0 0 0 0);
+}
+
+.image img:nth-of-type(1){
+    filter: grayscale(1) brightness(40%);
+}
+
+.image img:nth-of-type(2){
+    clip-path: var(--clip-start);
+    transition: clip-path 0.5s;
+}
+
+.image:hover img:nth-of-type(2){
+    clip-path: var(--clip-end);
+}
+
+
+/*--------------------------*/
+/*----Estilos del Footer----*/
+/*--------------------------*/
+footer{
+    background-color: #3679ad;
+    color: #fff;
+    padding: 30px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-md-4{
+    flex: 0 0 86%;
+    max-width: 33%;
+    text-align: center;
+}
+
+h3{
+    margin-bottom: 15px;
+    color: #102b3f;
+}
+
+li{
+    margin-bottom: 10px;
+}
+
+.col-md-4 li{
+    display: inline-block;
+    margin: 10px;
+}
+
+.col-md-4 li a{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 150;
+}
+
+.col-md-4 li a:hover{
+    color: black;
+}
+
+
+/*--------------------------*/
+/*----- MEDIA QUERRY -----*/
+/*--------------------------*/
+
+@media (max-width: 952px){
+    
+    .enlace{
+        padding-left: 20px;
+        font-size: 18px;
+    }
+
+    nav ul li a{
+        font-size: 16px;
+    }
+/*--------------------------*/
+/*----- Quienes somos-----*/
+/*--------------------------*/
+
+    .presentacion_copy{
+        width: 100%;
+    }
+
+    .about{
+        grid-template-columns: 1fr;
+    }
+
+    .about .container{
+        padding-top: 30px;
+    }
+
+    .about_img-left{
+        text-align: center;
+    }
+
+    .about_texts:last-child{
+        grid-row: 3/4;
+    }
+
+/*--------------------------*/
+/*-----Footer-----*/
+/*--------------------------*/
+.col-md-4{
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+}
+
+@media (max-width: 858px){
+    
+    .checkbtn{
+        display: block;
+    }
+
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #0b4e9b;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .8s;
+    }
+
+    .enlace{
+        font-size: 15px;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a{
+        font-size: 20px;
+        border-radius: 3px;
+    }
+
+    li a:hover{
+        background: none;
+        color: black;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+    }
+
+    .banner{
+        background: url(../img/venta-de-computadoras.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        height: calc(100vh - 80px);
+    }
+    
+    .contenido{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        color: black;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+    
+    .contenido h1{
+        margin: 20px;
+        font-size: 30px;
+        font-weight: 700;
+    }
+    
+    .contenido p{
+        font-size: 1.2rem;
+        font-weight: 540;
+    }
+
+/*--------------------------*/
+/*----- Quienes somos-----*/
+/*--------------------------*/
+
+.presentacion_picture{
+    width: 120px;
+    height: 120px;
+}
+
+.about{
+    row-gap: 60px;
+}
+
+.about .container{
+    padding-top: 10px;
+}
+
+/*--------------------------*/
+/*-----Galeria-----*/
+/*--------------------------*/
+.image-wrapper{
+    position: relative;
+    left: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 80%;
+    grid-gap: 0.5rem;
+    margin: 50px 0;
+    flex-direction: column;
+}
+
+h2{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+    margin: 30px 0;
+    color: #3679ad;
+}
+
+.image{
+    position: relative;
+    padding-bottom: 100%;
+    flex-direction: column;
+}
+
+.image img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-direction: column;
+}
+
+/*--------------------------*/
+/*-----Footer-----*/
+/*--------------------------*/
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    font-size: 15px;
+}
+
+.col-md-4{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+li{
+    margin-bottom: 10px;
+}
+
+.social-icons li{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons li a{
+    color: #fff;
+    font-size: 10px;
+    font-weight: 150;
+}
+
+.social-icons li a:hover{
+    color: black;
+}
+
+}
